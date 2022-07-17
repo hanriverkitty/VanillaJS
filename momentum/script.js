@@ -94,3 +94,10 @@ console.log(player1);
 console.log(player1.name);
 player1.sayHello1("lynn");
 player1.sayHello1("nico");
+
+const age = 96;
+function calculateKrAge(ageOfForeigner) {
+    return ageOfForeigner + 2;
+}
+const krAge = calculateKrAge(age);
+console.log(krAge);
