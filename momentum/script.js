@@ -101,3 +101,9 @@ function calculateKrAge(ageOfForeigner) {
 }
 const krAge = calculateKrAge(age);
 console.log(krAge);
+
+const promptAge = prompt("How old are you?");
+console.log(typeof parseInt(promptAge));
+//실행하는 동안 JS의 실행을 멈춘다. 뜨는 팝업에 css도 적용못한다
+
+const promptAge1 = parseInt(prompt("How old are you?"));
