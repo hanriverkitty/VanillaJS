@@ -102,23 +102,33 @@ function calculateKrAge(ageOfForeigner) {
 const krAge = calculateKrAge(age);
 console.log(krAge);
 
-const promptAge = prompt("How old are you?");
-console.log(typeof parseInt(promptAge));
-//실행하는 동안 JS의 실행을 멈춘다. 뜨는 팝업에 css도 적용못한다
+// const promptAge = prompt("How old are you?");
+// console.log(typeof parseInt(promptAge));
+// //실행하는 동안 JS의 실행을 멈춘다. 뜨는 팝업에 css도 적용못한다
 
-const promptAge1 = parseInt(prompt("How old are you?"));
-console.log(promptAge1);
+// const promptAge1 = parseInt(prompt("How old are you?"));
+// console.log(promptAge1);
 
-console.log(isNaN(promptAge1));
-//isNaN 숫자가 아닐경우 true 
-if (isNaN(promptAge1) || promptAge1 < 0) {
-    console.log("Please write a real positive number");
-} else if (promptAge1 < 18) {
-    console, log("You are too young");
-} else if (promptAge1 >= 18 && promptAge1 <= 50) {
-    console.log("You can drink");
-} else if (promptAge1 > 50 && promptAge1 <= 80) {
-    console.log("You should exercise");
-} else if (promptAge1 > 80) {
-    console.log("You can do whatever you want.");
-}
+// console.log(isNaN(promptAge1));
+// //isNaN 숫자가 아닐경우 true 
+// if (isNaN(promptAge1) || promptAge1 < 0) {
+//     console.log("Please write a real positive number");
+// } else if (promptAge1 < 18) {
+//     console, log("You are too young");
+// } else if (promptAge1 >= 18 && promptAge1 <= 50) {
+//     console.log("You can drink");
+// } else if (promptAge1 > 50 && promptAge1 <= 80) {
+//     console.log("You should exercise");
+// } else if (promptAge1 > 80) {
+//     console.log("You can do whatever you want.");
+// }
+
+document.title = "hello from JS"
+//document는 모든것의 시작점
+
+const title = document.getElementById("title");
+console.log(title);
+console.dir(title);
+title.innerText = "Got you";
+console.log(title.id);
+console.log(title.className);
