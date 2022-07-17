@@ -107,3 +107,12 @@ console.log(typeof parseInt(promptAge));
 //실행하는 동안 JS의 실행을 멈춘다. 뜨는 팝업에 css도 적용못한다
 
 const promptAge1 = parseInt(prompt("How old are you?"));
+console.log(promptAge1);
+
+console.log(isNaN(promptAge1));
+//isNaN 숫자가 아닐경우 true 
+if (isNaN(promptAge1)) {
+    console.log("Please write a number");
+} else {
+    console.log("Thank you for writing your age");
+}
