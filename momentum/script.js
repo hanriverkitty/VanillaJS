@@ -111,8 +111,14 @@ console.log(promptAge1);
 
 console.log(isNaN(promptAge1));
 //isNaN 숫자가 아닐경우 true 
-if (isNaN(promptAge1)) {
-    console.log("Please write a number");
-} else {
-    console.log("Thank you for writing your age");
+if (isNaN(promptAge1) || promptAge1 < 0) {
+    console.log("Please write a real positive number");
+} else if (promptAge1 < 18) {
+    console, log("You are too young");
+} else if (promptAge1 >= 18 && promptAge1 <= 50) {
+    console.log("You can drink");
+} else if (promptAge1 > 50 && promptAge1 <= 80) {
+    console.log("You should exercise");
+} else if (promptAge1 > 80) {
+    console.log("You can do whatever you want.");
 }
