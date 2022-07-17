@@ -42,3 +42,25 @@ console.log(daysOfWeek1);
 console.log(daysOfWeek1[4]);
 daysOfWeek1.push("sun");
 console.log(daysOfWeek1);
+
+
+//object
+const player = {
+    name: "nico",
+    points: 10,
+    fat: true,
+};
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);
+
+//change value
+player.fat = false;
+console.log(player);
+
+//add object
+player.lastName = "potato";
+console.log(player);
+
+player.points = player.points + 15;
+console.log(player);
