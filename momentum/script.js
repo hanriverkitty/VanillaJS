@@ -132,3 +132,17 @@ console.dir(title);
 title.innerText = "Got you";
 console.log(title.id);
 console.log(title.className);
+
+const hellos = document.getElementsByClassName("hello");
+console.log(hellos);
+
+const title1 = document.getElementsByTagName("h1");
+console.log(title1);
+
+//querySelector element를 CSS 방식으로 검색할 수 있다
+const title2 = document.querySelector(".hello h1");
+//hello class의 h1이 여러개가 있어도 첫번째것만 가져온다
+console.log(title2);
+
+const title3 = document.querySelectorAll(".hello h1");
+console.log(title3);
