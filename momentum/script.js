@@ -27,3 +27,18 @@ console.log(null1);
 let something;
 console.log(something, null1);
 //undefined 변수는 존재하나 값이 전달되지 않았다, 메모리는 존재한다
+const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sun = "sun";
+const daysOfWeek = [mon, tue, wed, thu, fri, sat, sun];
+const daysOfWeek1 = ["mon", "tue", "wed", "thu", "fri", "sat"];
+
+console.log(daysOfWeek);
+console.log(daysOfWeek1);
+console.log(daysOfWeek1[4]);
+daysOfWeek1.push("sun");
+console.log(daysOfWeek1);
