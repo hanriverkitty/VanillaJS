@@ -153,25 +153,32 @@ const title3 = document.querySelectorAll(".hello h1");
 console.log(title3);
 
 function handleTitleClicked() {
-    title2.style.color = "yellow";
+    const currentColor = title2.style.color;
+    let newColor;
+    if (currentColor === "yellow") {
+        newColor = "blue";
+    } else {
+        newColor = "yellow";
+    }
+    title2.style.color = newColor;
 }
-function handleMouseEnter() {
-    title2.innerText = "Mouse is here!";
-}
-function handleMouseLeave() {
-    title2.innerText = "Mouse is gone!";
-}
+// function handleMouseEnter() {
+//     title2.innerText = "Mouse is here!";
+// }
+// function handleMouseLeave() {
+//     title2.innerText = "Mouse is gone!";
+// }
 title2.addEventListener("click", handleTitleClicked);
-title2.addEventListener("mouseenter", handleMouseEnter);
-title2.addEventListener("mouseleave", handleMouseLeave);
+// title2.addEventListener("mouseenter", handleMouseEnter);
+// title2.addEventListener("mouseleave", handleMouseLeave);
 //===title2.onclick = handleTitleClicked;
 //===title2.onmouseenter = handleMouseEnter;
 
-function handleWindowResize() {
-    document.body.style.backgroundColor = "red";
-}
-function handleWindowCopy() {
-    alert("copier!")
-}
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "red";
+// }
+// function handleWindowCopy() {
+//     alert("copier!")
+// }
+// window.addEventListener("resize", handleWindowResize);
+// window.addEventListener("copy", handleWindowCopy);
