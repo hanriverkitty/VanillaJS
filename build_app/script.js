@@ -1,7 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = loginForm.querySelector("input");
 //const loginButton = loginForm.querySelector("button");
-
+const link = document.querySelector("a");
 
 function onLoginSubmit(event) {
     event.preventDefault();
@@ -19,3 +19,10 @@ function onLoginSubmit(event) {
 }
 //loginButton.addEventListener("click", handleBtnClick);
 loginForm.addEventListener("submit", onLoginSubmit);
+
+function handleLinkClick(event) {
+    event.preventDefault();
+    console.log(event);
+    alert("click!");
+}
+link.addEventListener("click", handleLinkClick);
