@@ -187,6 +187,7 @@ function handleTitleClicked() {
 
 
     //toggle 위의 코드를 기본적으로 기능으로 가지고 있다
+    //한줄로 가능
     title2.classList.toggle("clicked");
 }
 
