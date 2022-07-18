@@ -153,6 +153,8 @@ const title3 = document.querySelectorAll(".hello h1");
 console.log(title3);
 
 function handleTitleClicked() {
+
+    //CSS를 JS로 직접 변경
     // const currentColor = title2.style.color;
     // let newColor;
     // if (currentColor === "yellow") {
@@ -161,13 +163,34 @@ function handleTitleClicked() {
     //     newColor = "yellow";
     // }
     // title2.style.color = newColor;
-    const clickedClass = "clicked"
+
+
+
+    //className은 이전의 class를 모두 삭제시킨다
+    /*const clickedClass = "clicked"
     if (title2.className === clickedClass) {
         title2.className = "";
     } else {
         title2.className = clickedClass;
+    }*/
+
+
+    /*
+    //classList add와 remove를 사용해서 원래있던 class는 남겨놓는다
+    const clickedClass = "clicked"
+    if (title2.classList.contains(clickedClass)) {
+        title2.classList.remove(clickedClass);
+    } else {
+        title2.classList.add(clickedClass);
     }
+    */
+
+
+    //toggle 위의 코드를 기본적으로 기능으로 가지고 있다
+    title2.classList.toggle("clicked");
 }
+
+
 // function handleMouseEnter() {
 //     title2.innerText = "Mouse is here!";
 // }
