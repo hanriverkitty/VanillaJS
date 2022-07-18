@@ -146,21 +146,27 @@ console.log(title1);
 const title2 = document.querySelector(".hello h1");
 //hello class의 h1이 여러개가 있어도 첫번째것만 가져온다
 console.log(title2);
-title2.style.color = "red";
+//title2.style.color = "red";
 
 
 const title3 = document.querySelectorAll(".hello h1");
 console.log(title3);
 
 function handleTitleClicked() {
-    const currentColor = title2.style.color;
-    let newColor;
-    if (currentColor === "yellow") {
-        newColor = "blue";
+    // const currentColor = title2.style.color;
+    // let newColor;
+    // if (currentColor === "yellow") {
+    //     newColor = "blue";
+    // } else {
+    //     newColor = "yellow";
+    // }
+    // title2.style.color = newColor;
+    const clickedClass = "clicked"
+    if (title2.className === clickedClass) {
+        title2.className = "";
     } else {
-        newColor = "yellow";
+        title2.className = clickedClass;
     }
-    title2.style.color = newColor;
 }
 // function handleMouseEnter() {
 //     title2.innerText = "Mouse is here!";
