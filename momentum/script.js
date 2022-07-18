@@ -140,9 +140,19 @@ const title1 = document.getElementsByTagName("h1");
 console.log(title1);
 
 //querySelector element를 CSS 방식으로 검색할 수 있다
+//const title2 = document.querySelector(#hello");
+//hello라는 id값의 것 가져오기
+
 const title2 = document.querySelector(".hello h1");
 //hello class의 h1이 여러개가 있어도 첫번째것만 가져온다
 console.log(title2);
+title2.style.color = "red";
+
 
 const title3 = document.querySelectorAll(".hello h1");
 console.log(title3);
+
+function handleTitleClicked() {
+    title2.style.color = "yellow";
+}
+title2.addEventListener("click", handleTitleClicked);
