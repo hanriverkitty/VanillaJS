@@ -164,3 +164,14 @@ function handleMouseLeave() {
 title2.addEventListener("click", handleTitleClicked);
 title2.addEventListener("mouseenter", handleMouseEnter);
 title2.addEventListener("mouseleave", handleMouseLeave);
+//===title2.onclick = handleTitleClicked;
+//===title2.onmouseenter = handleMouseEnter;
+
+function handleWindowResize() {
+    document.body.style.backgroundColor = "red";
+}
+function handleWindowCopy() {
+    alert("copier!")
+}
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
