@@ -39,4 +39,12 @@ const quotes = [
         Latin: "Otiare, quo melius labores.",
         Korean: "일을 더 잘하기 위해서 쉬어라",
     }
-]
+];
+
+const quote = document.querySelector("#quote span:first-child");
+const korean = document.querySelector("#quote span:last-child");
+
+const todaysQuote = quotes[parseInt(Math.random() * quotes.length)];
+
+quote.innerText = todaysQuote.Latin;
+korean.innerText = todaysQuote.Korean;
