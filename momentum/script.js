@@ -155,4 +155,12 @@ console.log(title3);
 function handleTitleClicked() {
     title2.style.color = "yellow";
 }
+function handleMouseEnter() {
+    title2.innerText = "Mouse is here!";
+}
+function handleMouseLeave() {
+    title2.innerText = "Mouse is gone!";
+}
 title2.addEventListener("click", handleTitleClicked);
+title2.addEventListener("mouseenter", handleMouseEnter);
+title2.addEventListener("mouseleave", handleMouseLeave);
