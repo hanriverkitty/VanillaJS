@@ -14,8 +14,10 @@ function saveToDos() {
 function deleteToDo(event) {
     //console.log(event.target.parentElement.innerText);
     const li = event.target.parentElement;
-    console.log(li.id);
+    //console.log(li.id);
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     li.remove();
+    saveToDos();
 }
 
 
