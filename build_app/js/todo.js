@@ -3,7 +3,7 @@ const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
-const toDos = [];
+let toDos = [];
 
 function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
@@ -14,6 +14,7 @@ function saveToDos() {
 function deleteToDo(event) {
     //console.log(event.target.parentElement.innerText);
     const li = event.target.parentElement;
+    console.log(li.id);
     li.remove();
 }
 
@@ -22,8 +23,9 @@ function deleteToDo(event) {
 function paintToDo(newTodo) {
     //html요소 추가
     const li = document.createElement("li");
+    li.id = newTodo.id;
     const span = document.createElement("span");
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     const button = document.createElement("button");
     button.innerText = "X";
     button.addEventListener("click", deleteToDo);
@@ -36,20 +38,28 @@ function handelToDoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newTodo);
-    paintToDo(newTodo);
+    const newTodoObj = {
+        text: newTodo,
+        id: Date.now(),
+    };
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
     saveToDos();
 }
 toDoForm.addEventListener("submit", handelToDoSubmit);
 
-function sayHello(item) {
-    console.log("This is turn of ", item);
-}
+
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos) {
-    const parsedToDos = JSON.parse(savedToDos);
+    const parsedToDos = JSON.parse(savedToDos)
+    toDos = parsedToDos;
     //array에 있는 각각의  item에 대해 function을 실행할수 있다
-    parsedToDos.forEach(sayHello);
+    parsedToDos.forEach(paintToDo);
 }
+
+/*function sayHello(item) {
+    console.log("This is turn of ", item);
+}*/
+//(item) => console.log("this is turn of",item);으로 써도된다
